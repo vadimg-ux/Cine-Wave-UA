@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine-Wave UA - Твій Кінотеатр Онлайн</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class="fas fa-film"></i> Cine-Wave UA
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Головна</a>
+                <a href="#movies" class="nav-link">Фільми</a>
+                <a href="#top-rated" class="nav-link">Топ Рейтинг</a>
+                <a href="#about" class="nav-link">Про Нас</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Ласкаво просимо до Cine-Wave UA</h1>
+            <p class="hero-subtitle">Найкращі фільми світу у твоїх руках</p>
+            <button class="hero-btn" onclick="document.getElementById('movies').scrollIntoView({behavior: 'smooth'})">
+                Дивись Зараз
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- PLAYER SECTION -->
+    <section id="player-section" class="player-section hidden">
+        <div class="player-container">
+            <button class="close-player" onclick="closePlayer()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="video-player">
+                <video id="main-player" controls>
+                    <source src="" type="video/mp4">
+                    Ваш браузер не підтримує відео плеєр
+                </video>
+                <div class="player-controls">
+                    <button id="play-btn"><i class="fas fa-play"></i></button>
+                    <input type="range" id="progress-bar" min="0" max="100" value="0">
+                    <button id="fullscreen-btn"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+            <div class="movie-info">
+                <h2 id="player-title"></h2>
+                <p id="player-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOVIES SECTION -->
+    <section id="movies" class="movies-section">
+        <div class="section-header">
+            <h2>Популярні Фільми</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Пошук фільму...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Усі</button>
+            <button class="filter-btn" data-filter="action">Екшн</button>
+            <button class="filter-btn" data-filter="drama">Драма</button>
+            <button class="filter-btn" data-filter="comedy">Комедія</button>
+            <button class="filter-btn" data-filter="horror">Жах</button>
+            <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+        </div>
+        <div class="movies-grid" id="movies-grid">
+            <!-- Фільми будуть завантажуватись тут -->
+        </div>
+    </section>
+
+    <!-- TOP RATED SECTION -->
+    <section id="top-rated" class="top-rated-section">
+        <h2>Топ Рейтинг</h2>
+        <div class="top-rated-grid" id="top-rated-grid">
+            <!-- Топ фільми -->
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Про Cine-Wave UA</h2>
+            <p>Ми найбільша платформа для онлайн перегляду фільмів в Україні. Насолоджуйся найкращими фільмами світу без обмежень!</p>
+            <div class="stats">
+                <div class="stat">
+                    <h3>5000+</h3>
+                    <p>Фільмів</p>
+                </div>
+                <div class="stat">
+                    <h3>1M+</h3>
+                    <p>Користувачів</p>
+                </div>
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>Підтримка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cine-Wave UA</h3>
+                <p>Твій улюблений онлайн кінотеатр</p>
+            </div>
+            <div class="footer-section">
+                <h4>Посилання</h4>
+                <ul>
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#movies">Фільми</a></li>
+                    <li><a href="#top-rated">Топ Рейтинг</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Контакти</h4>
+                <p>Email: info@cinewave.ua</p>
+                <p>Телефон: +380 (XX) XXX-XX-XX</p>
+            </div>
+            <div class="footer-section">
+                <h4>Соцмережі</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cine-Wave UA. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
