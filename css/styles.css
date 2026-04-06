@@ -1,0 +1,59 @@
+.primary {
+    background: linear-gradient(135deg, cyan, pink);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.primary:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.button {
+    background-color: cyan;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: pink;
+    color: black;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.neon {
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px pink, 0 0 20px pink;
+}
